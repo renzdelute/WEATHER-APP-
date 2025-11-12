@@ -170,7 +170,7 @@ body {
 }
 
 /*mobile view*/
-@media (max-width: 600px) {
+@media (max-width: 900px) {
   .container {
     width: 92vw;        
     height: auto;       
@@ -245,6 +245,11 @@ body {
   body {
     padding: 10px;
   }
+
+  .location-display{
+  display: flex;
+  flex-direction: column;
+}
 }
 
 @media (max-width: 380px) {
