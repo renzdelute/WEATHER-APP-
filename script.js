@@ -114,17 +114,14 @@ function display(data){
 
     const formattedDate = localTime.toLocaleDateString('en-PH', optionsDate);
 
-    const displayText = document.createElement('h1');
     const displayCountryName = document.createElement('h4');
     const displayDate = document.createElement('h4');
 
     locationDisplay.textContent = "";
 
-    displayText.textContent = "SEARCH CITY";
     displayCountryName.textContent = `${data.name}, ${data.sys.country}`;
     displayDate.textContent = formattedDate;
 
-    locationDisplay.appendChild(displayText);
     locationDisplay.appendChild(displayCountryName);
     locationDisplay.appendChild(displayDate);
 
@@ -134,6 +131,7 @@ function display(data){
 }
     
     window.addEventListener('load', async () => {
+
     message.innerHTML = "Loading Manila weather...";
     const data = await getWeatherData("Manila");
     message.innerHTML = "";
